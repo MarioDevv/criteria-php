@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CodelyTv\Criteria;
+namespace MarioDevv\Criteria;
 
 final readonly class Criteria
 {
@@ -35,10 +35,10 @@ final readonly class Criteria
 	}
 
 	/** @throws InvalidCriteria */
-	public static function withFilters(array $filters): self
-	{
-		return self::fromPrimitives($filters, null, null, null, null);
-	}
+    public static function withFilters(Filters $filters): self
+    {
+        return new self($filters, Order::none(), null, null);
+    }
 
 	public function hasFilters(): bool
 	{

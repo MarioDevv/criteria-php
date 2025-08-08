@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CodelyTv\Criteria;
+namespace MarioDevv\Criteria;
 
 final class OrderBy
 {
